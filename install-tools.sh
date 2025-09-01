@@ -65,4 +65,12 @@ kubectl version --client
 gcloud components install gke-gcloud-auth-plugin
 gke-gcloud-auth-plugin --version
 
+# Setup git config
+git config --global core.excludesfile ~/.gitignore
+git config --global init.defaultBranch main
+git config --global user.name "Juk V."
+git config --global user.email "chukkrit.juk@gmail.com"
+git config --list
+git config credential.helper store
+
 echo "✅ Installation complete!"
