@@ -38,6 +38,7 @@ brew install --cask neohtop
 
 # CLI Tools and SDKs
 brew install zsh-syntax-highlighting
+brew install zsh-autosuggestions
 brew install htop
 brew install python
 brew install uv
