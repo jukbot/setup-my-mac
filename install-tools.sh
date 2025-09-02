@@ -34,9 +34,11 @@ brew install --cask warp
 brew install --cask insomnia
 brew install --cask 1password
 brew install --cask affine
+brew install --cask neohtop
 
 # CLI Tools and SDKs
 brew install zsh-syntax-highlighting
+brew install htop
 brew install python
 brew install uv
 brew install node
