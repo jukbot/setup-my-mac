@@ -40,6 +40,7 @@ brew install --cask neohtop
 brew install zsh-syntax-highlighting
 brew install zsh-autosuggestions
 brew install htop
+brew install neovim
 brew install python
 brew install uv
 brew install node
