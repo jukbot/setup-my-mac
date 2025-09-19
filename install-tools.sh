@@ -43,6 +43,7 @@ brew install htop
 brew install neovim
 brew install python
 brew install uv
+brew install pyenv
 brew install node
 brew install pnpm
 brew install go
@@ -52,6 +53,15 @@ brew install rustup
 brew install oven-sh/bun/bun
 brew install go-task
 brew install minikube
+brew install openssl 
+brew install readline 
+brew install sqlite3 
+brew install xz 
+brew install tcl-tk 
+brew install libb2 
+brew install zstd 
+brew install zlib 
+brew insstall pkgconfig
 
 echo "🖥️ Installing Applications..."
 
@@ -77,4 +87,27 @@ git config --global user.email "chukkrit.juk@gmail.com"
 git config --list
 git config credential.helper store
 
+# Setup pyenv
+alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(pyenv init - zsh)"' >> ~/.zshrc
+
+# Restart Shell
+
+echo "Restarting shell"
+exec "$SHELL"
+
+# Install python via pyenv
+pyenv install 3.13.7
+
+# Show config summary
+echo "Show config summart"
+brew config
+
+# Run doctor check
+echo "🧑‍⚕️ Health check..."
+brew doctor
+
 echo "✅ Installation complete!"
+
