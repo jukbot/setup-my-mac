@@ -26,12 +26,10 @@ brew install --cask kiro
 brew install --cask orbstack
 brew install --cask firefox
 brew install --cask font-jetbrains-mono
-brew install --cask arc
 brew install --cask visual-studio-code
 brew install --cask zoom
 brew install --cask devtoys
-brew install --cask warp
-brew install --cask insomnia
+brew install --cask zed
 brew install --cask 1password
 brew install --cask affine
 brew install --cask neohtop
@@ -40,6 +38,7 @@ brew install --cask neohtop
 brew install zsh-syntax-highlighting
 brew install zsh-autosuggestions
 brew install htop
+brew install cloudflared
 brew install neovim
 brew install python
 brew install uv
