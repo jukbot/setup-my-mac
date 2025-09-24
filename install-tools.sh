@@ -60,7 +60,9 @@ brew install tcl-tk
 brew install libb2 
 brew install zstd 
 brew install zlib 
-brew insstall pkgconfig
+brew install pkgconfig
+brew tap azure/azd
+brew install azd
 
 echo "🖥️ Installing Applications..."
 
