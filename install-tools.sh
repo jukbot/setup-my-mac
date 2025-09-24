@@ -61,8 +61,8 @@ brew install libb2
 brew install zstd 
 brew install zlib 
 brew install pkgconfig
-brew tap azure/azd
-brew install azd
+brew install azure-cli
+brew tap azure/azd && brew install azd
 
 echo "🖥️ Installing Applications..."
 
