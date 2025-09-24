@@ -62,6 +62,7 @@ brew install zstd
 brew install zlib 
 brew install pkgconfig
 brew install azure-cli
+brew install mvn
 brew tap azure/azd && brew install azd
 
 echo "🖥️ Installing Applications..."
