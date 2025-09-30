@@ -46,6 +46,7 @@ brew install pyenv
 brew install node
 brew install pnpm
 brew install go
+brew install openjdk@25
 brew install php
 brew install composer
 brew install rustup
