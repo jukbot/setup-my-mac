@@ -65,6 +65,7 @@ brew install pkgconfig
 brew install azure-cli
 brew install mvn
 brew tap azure/azd && brew install azd
+brew install buildpacks/tap/pack
 
 echo "🖥️ Installing Applications..."
 
@@ -89,6 +90,9 @@ git config --global user.name "Juk V."
 git config --global user.email "chukkrit.juk@gmail.com"
 git config --list
 git config credential.helper store
+
+# Setup buildpack
+. $(pack completion --shell zsh)
 
 # Setup pyenv
 alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
