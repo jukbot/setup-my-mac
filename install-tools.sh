@@ -91,6 +91,9 @@ git config --global user.email "chukkrit.juk@gmail.com"
 git config --list
 git config credential.helper store
 
+# Setup rustup and cargo
+curl https://sh.rustup.rs -sSf | sh
+
 # Setup buildpack
 . $(pack completion --shell zsh)
 
