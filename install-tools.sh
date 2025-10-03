@@ -33,6 +33,7 @@ brew install --cask zed
 brew install --cask 1password
 brew install --cask affine
 brew install --cask neohtop
+brew install --cask graalvm-jdk
 
 # CLI Tools and SDKs
 brew install zsh-syntax-highlighting
@@ -107,7 +108,13 @@ echo 'eval "$(pyenv init - zsh)"' >> ~/.zshrc
 sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
 echo 'export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"' >> ~/.zshrc
 export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
- 
+# Set JAVA_HOME
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/graalvm-jdk-25/Contents/Home
+# Install native-image
+$JAVA_HOME/bin/gu install native-image
+# Verify
+native-image --version
+
 # Apply Shell
 source ~/.zsrhc
 
