@@ -34,6 +34,8 @@ brew install --cask 1password
 brew install --cask affine
 brew install --cask neohtop
 brew install --cask graalvm-jdk
+brew tap wickenico/wailbrew
+brew install --cask wailbrew
 
 # CLI Tools and SDKs
 brew install zsh-syntax-highlighting
