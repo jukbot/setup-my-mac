@@ -67,6 +67,7 @@ brew install zlib
 brew install pkgconfig
 brew install azure-cli
 brew install mvn
+brew install go-blueprint
 brew tap azure/azd && brew install azd
 brew install buildpacks/tap/pack
 
