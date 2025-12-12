@@ -70,6 +70,7 @@ brew install mvn
 brew install go-blueprint
 brew install bruno
 brew tap azure/azd && brew install azd
+brew tap microsoft/foundrylocal && brew install foundrylocal
 brew install buildpacks/tap/pack
 
 echo "🖥️ Installing Applications..."
