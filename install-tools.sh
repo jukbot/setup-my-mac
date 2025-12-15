@@ -65,12 +65,10 @@ brew install libb2
 brew install zstd 
 brew install zlib 
 brew install pkgconfig
-brew install azure-cli
 brew install mvn
 brew install go-blueprint
-brew install bruno
+brew install firefoxpwa
 brew tap azure/azd && brew install azd
-brew tap microsoft/foundrylocal && brew install foundrylocal
 brew install buildpacks/tap/pack
 
 echo "🖥️ Installing Applications..."
