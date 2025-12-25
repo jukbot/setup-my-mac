@@ -36,6 +36,8 @@ brew install --cask neohtop
 brew install --cask graalvm-jdk
 brew tap wickenico/wailbrew
 brew install --cask wailbrew
+brew tap aurc/loggo
+brew install aurc/loggo/loggo
 
 # CLI Tools and SDKs
 brew install zsh-syntax-highlighting
@@ -77,9 +79,8 @@ echo "🖥️ Installing Applications..."
 echo "🔁 Sourcing environment files..."
 source ~/.zshrc
 
-# Clean up cache
-echo "🧹 Cleaning up trash..."
-brew cleanup --prune=all
+# Install pnpm
+corepack enable pnpm
 
 # Setup gcloud cli
 gcloud components install kubectl
@@ -136,6 +137,10 @@ brew config
 # Run doctor check
 echo "🧑‍⚕️ Health check..."
 brew doctor
+
+# Clean up cache
+echo "🧹 Cleaning up trash..."
+brew cleanup --prune=all
 
 echo "✅ Installation complete!"
 
