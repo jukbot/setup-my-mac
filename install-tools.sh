@@ -11,22 +11,22 @@ echo "📦 Installing CLI tools and runtimes..."
 
 # GUI Applications via --cask
 brew install --cask ghostty
+brew install --cask visual-studio-code
 brew install --cask dotnet-sdk
+brew install --cask google-cloud-sdk
 brew install --cask lens
+brew install --cask orbstack
+
 brew install --cask telegram
+brew install --cask discord
+
 brew install --cask tableplus
 brew install --cask redis-insight
-brew install --cask mongodb-compass
-brew install --cask google-cloud-sdk
+
 brew install --cask aldente
-brew install --cask discord
-brew install --cask messenger
 brew install --cask chatgpt
-brew install --cask kiro
-brew install --cask orbstack
 brew install --cask firefox
 brew install --cask font-jetbrains-mono
-brew install --cask visual-studio-code
 brew install --cask zoom
 brew install --cask devtoys
 brew install --cask zed
@@ -34,19 +34,24 @@ brew install --cask 1password
 brew install --cask affine
 brew install --cask neohtop
 brew install --cask graalvm-jdk
+
 brew tap wickenico/wailbrew
 brew install --cask wailbrew
+
 brew tap aurc/loggo
 brew install aurc/loggo/loggo
+
+brew tap azure/azd
+brew install azd
 
 # CLI Tools and SDKs
 brew install zsh-syntax-highlighting
 brew install zsh-autosuggestions
 brew install htop
-brew install cloudflared
 brew install neovim
 brew install python
 brew install uv
+brew install ty
 brew install pyenv
 brew install node
 brew install pnpm
@@ -69,8 +74,6 @@ brew install zlib
 brew install pkgconfig
 brew install mvn
 brew install go-blueprint
-brew install firefoxpwa
-brew tap azure/azd && brew install azd
 brew install buildpacks/tap/pack
 
 echo "🖥️ Installing Applications..."
