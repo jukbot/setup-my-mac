@@ -40,9 +40,7 @@ brew install --cask wailbrew
 
 brew tap aurc/loggo
 brew install aurc/loggo/loggo
-
-brew tap azure/azd
-brew install azd
+brew install azure-cli
 
 # CLI Tools and SDKs
 brew install zsh-syntax-highlighting
