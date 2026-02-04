@@ -29,18 +29,15 @@ brew install --cask firefox
 brew install --cask font-jetbrains-mono
 brew install --cask zoom
 brew install --cask devtoys
-brew install --cask zed
 brew install --cask 1password
 brew install --cask affine
-brew install --cask neohtop
-brew install --cask graalvm-jdk
+# brew install --cask graalvm-jdk
 
 brew tap wickenico/wailbrew
 brew install --cask wailbrew
 
 brew tap aurc/loggo
 brew install aurc/loggo/loggo
-brew install azure-cli
 
 # CLI Tools and SDKs
 brew install zsh-syntax-highlighting
@@ -54,9 +51,6 @@ brew install pyenv
 brew install node
 brew install pnpm
 brew install go
-brew install openjdk@25
-brew install php
-brew install composer
 brew install rustup
 brew install oven-sh/bun/bun
 brew install go-task
@@ -70,9 +64,13 @@ brew install libb2
 brew install zstd 
 brew install zlib 
 brew install pkgconfig
-brew install mvn
 brew install go-blueprint
 brew install buildpacks/tap/pack
+# brew install openjdk@25
+# brew install mvn
+# brew install php
+# brew install composer
+# brew install azure-cli
 
 echo "🖥️ Installing Applications..."
 
@@ -92,6 +90,8 @@ gke-gcloud-auth-plugin --version
 # Setup git config
 git config --global core.excludesfile ~/.gitignore
 git config --global init.defaultBranch main
+
+# TODO: change your name
 git config --global user.name "Juk V."
 git config --global user.email "chukkrit.juk@gmail.com"
 git config --list
@@ -110,15 +110,15 @@ echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zsh
 echo 'eval "$(pyenv init - zsh)"' >> ~/.zshrc
 
 # Setup openjdk
-sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
-echo 'export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"' >> ~/.zshrc
-export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
+# sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+# echo 'export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"' >> ~/.zshrc
+# export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
 # Set JAVA_HOME
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/graalvm-jdk-25/Contents/Home
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/graalvm-jdk-25/Contents/Home
 # Install native-image
-$JAVA_HOME/bin/gu install native-image
+# $JAVA_HOME/bin/gu install native-image
 # Verify
-native-image --version
+# native-image --version
 
 # Apply Shell
 source ~/.zsrhc
