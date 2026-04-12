@@ -107,6 +107,7 @@ brew install go-blueprint   # Go project scaffolding tool
 # ─────────────────────────────────────────────
 echo "🦀 Installing Rust toolchain manager..."
 brew install rustup  # Rust toolchain installer (run 'rustup-init' after)
+rustup-init -y
 
 # ─────────────────────────────────────────────
 # ⚡ Task Runners & Kubernetes
@@ -142,6 +143,7 @@ echo "📦 All packages installed."
 # ─────────────────────────────────────────────
 echo "🔁 Sourcing environment files..."
 source ~/.zshrc
+source $HOME/.cargo/env
 
 # ─────────────────────────────────────────────
 # 🟩 Setup pnpm via Corepack
@@ -170,12 +172,6 @@ git config --global user.name "Juk V."
 git config --global user.email "chukkrit.juk@gmail.com"
 git config --list
 git config credential.helper store
-
-# ─────────────────────────────────────────────
-# 🦀 Setup Rustup & Cargo
-# ─────────────────────────────────────────────
-echo "🦀 Installing Rust via rustup..."
-curl https://sh.rustup.rs -sSf | sh
 
 # ─────────────────────────────────────────────
 # 📦 Setup Buildpack CLI (optional)
