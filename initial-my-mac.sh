@@ -51,15 +51,17 @@ else
     echo "🧪 Oh My Zsh is already installed."
 fi
 
-# Write oh-my-zsh config to .zshrc
-{
-  echo ''
-  echo '# Oh My Zsh configuration'
-  echo 'export ZSH="$HOME/.oh-my-zsh"'
-  echo 'ZSH_THEME="eastwood"'
-  echo 'plugins=(git)'
-  echo 'source $ZSH/oh-my-zsh.sh'
-} >> "$ZSHRC"
+# Write oh-my-zsh config to .zshrc (idempotent)
+if ! grep -Fq '# Oh My Zsh configuration' "$ZSHRC"; then
+  {
+    echo ''
+    echo '# Oh My Zsh configuration'
+    echo 'export ZSH="$HOME/.oh-my-zsh"'
+    echo 'ZSH_THEME="eastwood"'
+    echo 'plugins=(git)'
+    echo 'source $ZSH/oh-my-zsh.sh'
+  } >> "$ZSHRC"
+fi
 
 echo "🐟 Installing zsh-syntax-highlighting..."
 brew install zsh-syntax-highlighting
