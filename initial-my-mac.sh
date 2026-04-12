@@ -52,15 +52,40 @@ else
 fi
 
 # Write oh-my-zsh config to .zshrc (idempotent)
-if ! grep -Fq '# Oh My Zsh configuration' "$ZSHRC"; then
-  {
-    echo ''
-    echo '# Oh My Zsh configuration'
-    echo 'export ZSH="$HOME/.oh-my-zsh"'
-    echo 'ZSH_THEME="eastwood"'
-    echo 'plugins=(git)'
-    echo 'source $ZSH/oh-my-zsh.sh'
-  } >> "$ZSHRC"
+OH_MY_ZSH_BEGIN_MARKER='# >>> initial-my-mac oh-my-zsh >>>'
+OH_MY_ZSH_END_MARKER='# <<< initial-my-mac oh-my-zsh <<<'
+if grep -Fq "$OH_MY_ZSH_BEGIN_MARKER" "$ZSHRC"; then
+    TMP_ZSHRC="$(mktemp)"
+    awk -v begin="$OH_MY_ZSH_BEGIN_MARKER" -v end="$OH_MY_ZSH_END_MARKER" '
+        $0 == begin {
+            print begin
+            print "# Oh My Zsh configuration"
+            print "export ZSH=\"$HOME/.oh-my-zsh\""
+            print "ZSH_THEME=\"eastwood\""
+            print "plugins=(git)"
+            print "source $ZSH/oh-my-zsh.sh"
+            in_block = 1
+            next
+        }
+        $0 == end {
+            in_block = 0
+            print end
+            next
+        }
+        !in_block { print }
+    ' "$ZSHRC" > "$TMP_ZSHRC"
+    mv "$TMP_ZSHRC" "$ZSHRC"
+else
+    {
+        echo ''
+        echo "$OH_MY_ZSH_BEGIN_MARKER"
+        echo '# Oh My Zsh configuration'
+        echo 'export ZSH="$HOME/.oh-my-zsh"'
+        echo 'ZSH_THEME="eastwood"'
+        echo 'plugins=(git)'
+        echo 'source $ZSH/oh-my-zsh.sh'
+        echo "$OH_MY_ZSH_END_MARKER"
+    } >> "$ZSHRC"
 fi
 
 echo "🐟 Installing zsh-syntax-highlighting..."
