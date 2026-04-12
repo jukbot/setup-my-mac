@@ -16,6 +16,7 @@ brew install --cask dotnet-sdk
 brew install --cask google-cloud-sdk
 brew install --cask lens
 brew install --cask orbstack
+brew install --cask warp
 
 brew install --cask telegram
 brew install --cask discord
@@ -42,6 +43,7 @@ brew install aurc/loggo/loggo
 # CLI Tools and SDKs
 brew install zsh-syntax-highlighting
 brew install zsh-autosuggestions
+
 brew install htop
 brew install neovim
 brew install python
@@ -54,10 +56,9 @@ brew install go
 brew install rustup
 brew install oven-sh/bun/bun
 brew install go-task
+brew install just
 brew install minikube
 brew install openssl 
-brew install readline 
-brew install sqlite3 
 brew install xz 
 brew install tcl-tk 
 brew install libb2 
@@ -65,12 +66,12 @@ brew install zstd
 brew install zlib 
 brew install pkgconfig
 brew install go-blueprint
-brew install buildpacks/tap/pack
+# brew install buildpacks/tap/pack
+# brew install azure-cli
 # brew install openjdk@25
 # brew install mvn
 # brew install php
 # brew install composer
-# brew install azure-cli
 
 echo "🖥️ Installing Applications..."
 
