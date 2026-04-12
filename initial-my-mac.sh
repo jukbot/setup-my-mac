@@ -32,7 +32,7 @@ if ! command -v brew >/dev/null 2>&1; then
         exit 1
     fi
 
-    echo "eval \"\$("$BREW_BIN" shellenv)\"" >> "$ZSHRC"
+    printf 'eval "$(%s shellenv)"\n' "$BREW_BIN" >> "$ZSHRC"
     eval "$("$BREW_BIN" shellenv)"
 else
     echo "🍺 Homebrew is already installed."
