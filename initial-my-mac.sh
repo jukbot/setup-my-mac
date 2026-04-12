@@ -63,6 +63,9 @@ fi
 
 echo "🐟 Installing zsh-syntax-highlighting..."
 brew install zsh-syntax-highlighting
-echo "source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$ZSHRC"
+ZSH_SYNTAX_HIGHLIGHTING_LINE="source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+if ! grep -Fqx "$ZSH_SYNTAX_HIGHLIGHTING_LINE" "$ZSHRC"; then
+    echo "$ZSH_SYNTAX_HIGHLIGHTING_LINE" >> "$ZSHRC"
+fi
 
 echo "✅ Setup homebrew and shell complete!"
