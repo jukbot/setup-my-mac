@@ -67,7 +67,6 @@ brew install aurc/loggo/loggo
 # 🐚 Shell Enhancements
 # ─────────────────────────────────────────────
 echo "🐚 Installing shell enhancements..."
-brew install zsh-syntax-highlighting  # Fish-like syntax highlighting for zsh
 brew install zsh-autosuggestions      # Fish-like command autosuggestions for zsh
 
 # ─────────────────────────────────────────────
