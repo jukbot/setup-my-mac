@@ -19,13 +19,21 @@ chmod u+w "$ZSHRC"
 if ! command -v brew >/dev/null 2>&1; then
     echo "🍺 Installing Homebrew..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    if [[ "$(uname -m)" == "arm64" ]]; then
+    if [ -x "/opt/homebrew/bin/brew" ]; then
         BREW_BIN="/opt/homebrew/bin/brew"
-    else
+    elif [ -x "/usr/local/bin/brew" ]; then
         BREW_BIN="/usr/local/bin/brew"
+    else
+        BREW_BIN="$(command -v brew || true)"
     fi
-    echo "eval \"\$(${BREW_BIN} shellenv)\"" >> "$ZSHRC"
-    eval "$($BREW_BIN shellenv)"
+
+    if [ -z "$BREW_BIN" ]; then
+        echo "❌ Homebrew was installed, but the brew binary could not be found."
+        exit 1
+    fi
+
+    echo "eval \"\$("$BREW_BIN" shellenv)\"" >> "$ZSHRC"
+    eval "$("$BREW_BIN" shellenv)"
 else
     echo "🍺 Homebrew is already installed."
 fi
