@@ -77,6 +77,13 @@ brew install htop    # Interactive process viewer
 brew install neovim  # Hyperextensible Vim-based text editor
 
 # ─────────────────────────────────────────────
+# 🖊️ AI & Agents
+# ─────────────────────────────────────────────
+echo "🖊️ Installing ai and agentics tools..."
+brew install copilot-cli        # Co-Pilot
+brew install --cask claude-code # Claude Code
+
+# ─────────────────────────────────────────────
 # 🐍 Python Ecosystem
 # ─────────────────────────────────────────────
 echo "🐍 Installing Python ecosystem..."
