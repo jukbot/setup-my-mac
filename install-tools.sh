@@ -77,9 +77,10 @@ brew install htop    # Interactive process viewer
 brew install neovim  # Hyperextensible Vim-based text editor
 
 # ─────────────────────────────────────────────
-# 🖊️ AI & Agents
+# 🤖 AI & Agents
 # ─────────────────────────────────────────────
-echo "🖊️ Installing ai and agentics tools..."
+echo "🤖 Installing AI tools and Agentics tools..."
+brew install rtk                # CLI proxy that reduces LLM token
 brew install copilot-cli        # Co-Pilot
 brew install --cask claude-code # Claude Code
 
