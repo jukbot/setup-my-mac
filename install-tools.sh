@@ -21,6 +21,7 @@ brew install --cask google-cloud-sdk  # Google Cloud CLI & tools
 brew install --cask lens              # Kubernetes IDE
 brew install --cask orbstack          # Docker / container runtime
 brew install --cask warp              # AI-powered terminal
+brew install act                      # Run GitHub Actions locally
 # brew install --cask graalvm-jdk     # GraalVM JDK (optional)
 
 # ─────────────────────────────────────────────
