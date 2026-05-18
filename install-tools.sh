@@ -18,7 +18,7 @@ brew install --cask ghostty           # Terminal emulator
 brew install --cask visual-studio-code # Code editor
 brew install --cask dotnet-sdk        # .NET SDK
 brew install --cask google-cloud-sdk  # Google Cloud CLI & tools
-brew install --cask lens              # Kubernetes IDE
+brew install --cask freelens          # Free Kubernetes IDE
 brew install --cask orbstack          # Docker / container runtime
 brew install --cask warp              # AI-powered terminal
 brew install act                      # Run GitHub Actions locally
