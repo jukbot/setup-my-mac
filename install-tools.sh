@@ -50,6 +50,7 @@ brew install --cask zoom              # Video conferencing
 brew install --cask devtoys           # Developer utilities Swiss knife
 brew install --cask 1password         # Password manager
 brew install --cask affine            # Note-taking / knowledge base
+brew install mole.                    # Deep System Cleanup
 
 # ─────────────────────────────────────────────
 # 🔌 Third-party Tap Installs
