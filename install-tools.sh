@@ -85,6 +85,7 @@ echo "🤖 Installing AI tools and Agentics tools..."
 brew install rtk                # CLI proxy that reduces LLM token
 brew install copilot-cli        # Co-Pilot
 brew install --cask claude-code # Claude Code
+brew install anthropics/tap/ant # Claude Platform CLI
 
 # ─────────────────────────────────────────────
 # 🐍 Python Ecosystem
