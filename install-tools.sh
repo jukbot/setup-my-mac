@@ -65,6 +65,9 @@ brew install --cask wailbrew
 brew tap aurc/loggo
 brew install aurc/loggo/loggo
 
+# Mise - One tool to manage languages, env vars, and tasks per project, reproducibly. 
+brew install mise
+
 # ─────────────────────────────────────────────
 # 🐚 Shell Enhancements
 # ─────────────────────────────────────────────
