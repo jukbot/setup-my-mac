@@ -27,7 +27,8 @@ npm install -g @juliusbrussee/caveman-code
 npx impeccable install
 npx skills add nutlope/hallmark
 npx skills add https://github.com/cloudflare/skills --skill cloudflare
-
+npx skills add mattpocock/skills
+npx skills add vercel-labs/agent-skills
 
 
 # Run Homebrew doctor to detect potential issues
