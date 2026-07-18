@@ -19,6 +19,9 @@ claude plugin marketplace add openai/codex-plugin-cc && claude plugin install co
 npx add-skill vercel-labs/agent-skills
 npx skills add nutlope/hallmark --skill hallmark --agent claude-code
 npx impeccable install --providers=claude --scope=global
+npx skills add impeccable --agent claude-code
+npx skills add nuxt/ui --agent claude-code
+npx skills add vuejs-ai/skills -agent claude-code
 
 # ─────────────────────────────────────────────
 # 🪄 MCP
