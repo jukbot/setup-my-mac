@@ -19,10 +19,11 @@ claude plugin marketplace add obra/superpowers && claude plugin install superpow
 
 npx add-skill vercel-labs/agent-skills
 npx impeccable install --providers=claude --scope=global
-npx skills add nutlope/hallmark --skill hallmark --agent claude-code
-npx skills add impeccable --agent claude-code
-npx skills add nuxt/ui --agent claude-code
-npx skills add vuejs-ai/skills -agent claude-code
+npx skills add nutlope/hallmark --skill hallmark --agent claude-code -g
+npx skills add impeccable --agent claude-code -g
+npx skills add nuxt/ui --agent claude-code -g
+npx skills add vuejs-ai/skills -agent claude-code -g
+npx skills add kunchenguid/chrome-devtools-axi --agent claude-code -g
 
 # ─────────────────────────────────────────────
 # 🪄 MCP
