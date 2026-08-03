@@ -89,6 +89,7 @@ brew install rtk                # CLI proxy that reduces LLM token
 brew install --cask codex
 brew install --cask claude-code # Claude Code
 brew install anthropics/tap/ant # Claude Platform CLI
+brew install anomalyco/tap/opencode # OpenCode
 
 # ─────────────────────────────────────────────
 # 🐍 Python Ecosystem
