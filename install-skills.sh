@@ -3,24 +3,25 @@
 # Exit on error
 set -e
 
-# ─────────────────────────────────────────────
-# 🔦 MCP
-# ─────────────────────────────────────────────
-
-echo "🤖 Installing AI MCP..."
-
-claude mcp add browser-use -- uvx -y browser-use
-claude mcp add --transport http github https://api.githubcopilot.com/mcp/ # https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/use-the-github-mcp-server
-claude mcp add --transport http cloudflare https://docs.mcp.cloudflare.com/mcp 
 
 # ─────────────────────────────────────────────
-# 🪄 Skills
+# 🪄 MCP and Skills
 # ─────────────────────────────────────────────
 
-echo "🤖 Installing AI skills..."
+echo "🤖 Updating AI marketplace(s)..."
+claude plugin marketplace update
+
+
+echo "🤖 Installing AI MCP and skills..."
+
+# Browser Use
+uv tool install browser-use && browser-use skill install
 
 # ChromeDevTool MCP + Skills
 claude plugin marketplace add ChromeDevTools/chrome-devtools-mcp && claude plugin install chrome-devtools-mcp@chrome-devtools-plugins
+
+# GitHub (https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/use-the-github-mcp-server)
+claude plugin install github@claude-plugins-official
 
 # Caveman (Token Optimizing)
 claude plugin marketplace add JuliusBrussee/caveman && claude plugin install caveman@caveman
@@ -57,18 +58,18 @@ claude plugin marketplace add pbakaus/impeccable &&
 # Dotnet
 claude plugin marketplace add dotnet/skills
 
+# UX/UI Design
+claude plugin marketplace add pbakaus/impeccable
+npx skills add nutlope/hallmark --skill hallmark --agent claude-code --yes --global
+
 # Productivity/Code-review
 npx skills add thananon/9arm-skills --agent claude-code --skill '*' --yes --global
 
 # Vercel
-npx skills add vercel-labs/agent-skills --agent claude-code --skill '*' --yes --global
+# npx skills add vercel-labs/agent-skills --agent claude-code --skill '*' --yes --global
 
 # Resend
-npx skills add resend/resend-skills --agent claude-code --skill '*' --yes --global
-
-# UX/UI Design
-claude plugin marketplace add pbakaus/impeccable
-npx skills add nutlope/hallmark --skill hallmark --agent claude-code --yes --global
+# npx skills add resend/resend-skills --agent claude-code --skill '*' --yes --global
 
 # Frontend Programming
 npx skills add nuxt/ui --agent claude-code --yes --global
@@ -78,18 +79,8 @@ npx skills add vuejs-ai/skills --agent claude-code --yes --global
 npx skills add samber/cc-skills-golang --agent claude-code --yes --global
 npx skills add openai/skills --skill aspnet-core --agent claude-code --yes --global
 
-# Agent tooling
-npx -y skills add kunchenguid/chrome-devtools-axi --agent claude-code --yes --global
+# AXI
+npx skills add kunchenguid/chrome-devtools-axi --agent claude-code --skill '*' --yes --global
 
-
-
-
-# Run Homebrew doctor to detect potential issues
-echo "🧑‍⚕️ Health check..."
-brew doctor
-
-# Remove old versions and cached downloads
-echo "🧹 Cleaning up trash..."
-brew cleanup --prune=all
 
 echo "✅ Installation complete!"
