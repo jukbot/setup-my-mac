@@ -167,6 +167,12 @@ echo "🟩 Enabling pnpm via corepack..."
 corepack enable pnpm
 
 # ─────────────────────────────────────────────
+# ☁️ Setup GitHub CLI & Config
+# ─────────────────────────────────────────────
+brew install gh
+gh auth login --hostname github.com --git-protocol ssh
+
+# ─────────────────────────────────────────────
 # ☁️ Setup Google Cloud CLI & kubectl
 # ─────────────────────────────────────────────
 echo "☁️ Configuring gcloud components..."
