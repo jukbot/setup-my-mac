@@ -86,10 +86,11 @@ brew install neovim  # Hyperextensible Vim-based text editor
 # ─────────────────────────────────────────────
 echo "🤖 Installing AI tools and Agentics tools..."
 brew install rtk                # CLI proxy that reduces LLM token
-brew install --cask codex
+brew install --cask codex       # Codex
 brew install --cask claude-code # Claude Code
 brew install anthropics/tap/ant # Claude Platform CLI
 brew install anomalyco/tap/opencode # OpenCode
+brew tap crossoverJie/skilldeck && brew install --cask skilldeck # SkillDeck
 
 # ─────────────────────────────────────────────
 # 🐍 Python Ecosystem
