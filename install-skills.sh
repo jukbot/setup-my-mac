@@ -3,6 +3,8 @@
 # Exit on error
 set -e
 
+# High-performance CLI proxy compression
+brew install rtk
 
 # ─────────────────────────────────────────────
 # 🪄 MCP and Skills
@@ -10,7 +12,6 @@ set -e
 
 echo "🤖 Updating AI marketplace(s)..."
 claude plugin marketplace update
-
 
 echo "🤖 Installing AI MCP and skills..."
 
@@ -25,6 +26,9 @@ claude plugin install github@claude-plugins-official
 
 # Caveman (Token Optimizing)
 claude plugin marketplace add JuliusBrussee/caveman && claude plugin install caveman@caveman
+
+# Ponytail
+claude plugin marketplace add DietrichGebert/ponytail && claude plugin install ponytail@ponytail
 
 # Temporal
 claude plugin marketplace add temporalio/claude-temporal-plugin && claude plugin install temporal@temporal-marketplace
