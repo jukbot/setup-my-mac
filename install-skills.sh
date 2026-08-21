@@ -74,7 +74,7 @@ npx skills add kunchenguid/chrome-devtools-axi --skill '*' --yes --global
 # Temporal (Optional)
 # claude plugin marketplace add temporalio/claude-temporal-plugin && claude plugin install temporal@temporal-marketplace
 
-# AI Gateway (Optional)
+# P'Dear AI Gateway (Optional)
 # claude plugin marketplace add EverydayImcalculating/claude-skills && claude plugin install aigw
 
 echo "✅ Installation complete!"
