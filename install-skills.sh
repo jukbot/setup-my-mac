@@ -24,7 +24,7 @@ npx skills add thananon/9arm-skills --skill '*' --yes --global
 # Knowledge Workers (RECOMMENDED)
 claude plugin marketplace add anthropics/knowledge-work-plugins
 
-# Token Optimization (RECOMMENDED) => (Do not use with RTK proxy)
+# Token Optimization (RECOMMENDED) => (Do not use with RTK proxy this with degrade context performance)
 claude plugin marketplace add JuliusBrussee/caveman && claude plugin install caveman@caveman
 claude plugin marketplace add DietrichGebert/ponytail && claude plugin install ponytail@ponytail
 
