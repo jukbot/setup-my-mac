@@ -3,9 +3,6 @@
 # Exit on error
 set -e
 
-# High-performance CLI proxy compression
-brew install rtk
-
 # ─────────────────────────────────────────────
 # 🪄 MCP and Skills
 # ─────────────────────────────────────────────
@@ -15,76 +12,67 @@ claude plugin marketplace update
 
 echo "🤖 Installing AI MCP and skills..."
 
-# Browser Use
+# Debugging Tools (RECOMMENDED)
 uv tool install browser-use && browser-use skill install
-
-# ChromeDevTool MCP + Skills
 claude plugin marketplace add ChromeDevTools/chrome-devtools-mcp && claude plugin install chrome-devtools-mcp@chrome-devtools-plugins
 
-# GitHub (https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/use-the-github-mcp-server)
-claude plugin install github@claude-plugins-official
-
-# Caveman (Token Optimizing)
-claude plugin marketplace add JuliusBrussee/caveman && claude plugin install caveman@caveman
-
-# Ponytail
-claude plugin marketplace add DietrichGebert/ponytail && claude plugin install ponytail@ponytail
-
-# Temporal
-claude plugin marketplace add temporalio/claude-temporal-plugin && claude plugin install temporal@temporal-marketplace
-
-# Cloudflare (https://developers.cloudflare.com/agents/model-context-protocol/cloudflare/servers-for-cloudflare/)
-claude plugin marketplace add cloudflare/skills && claude plugin install cloudflare@cloudflare
-
-# Redis
-claude plugin marketplace add redis/agent-skills && claude install redis-development@redis
-
-# CodeRabbit
-claude plugin install coderabbit # https://docs.coderabbit.ai/cli/claude-code-integration
-
-# Productivity
+# Productivity Tools (RECOMMENDED)
 claude plugin marketplace add hyperb1iss/hyperskills && claude plugin install hyperskills@hyperb1iss
 claude plugin marketplace add mattpocock/skills && claude plugin install mattpocock-skills@mattpococ
-claude plugin marketplace add openai/codex-plugin-cc && claude plugin install codex@openai-codex
+npx skills add thananon/9arm-skills --skill '*' --yes --global
 
-# Langchain
-claude plugin marketplace add langchain-ai/langchain-skills && claude plugin install langchain-skills@langchain-skills
-
-# Azure
-claude plugin install azure@claude-plugins-official
-
-# Claude Cowork
+# Knowledge Workers (RECOMMENDED)
 claude plugin marketplace add anthropics/knowledge-work-plugins
 
-# Impeccable Design
-claude plugin marketplace add pbakaus/impeccable && 
+# Token Optimization (RECOMMENDED) => (Do not use with RTK proxy)
+claude plugin marketplace add JuliusBrussee/caveman && claude plugin install caveman@caveman
+claude plugin marketplace add DietrichGebert/ponytail && claude plugin install ponytail@ponytail
 
-# Dotnet
-claude plugin marketplace add dotnet/skills
+# Code Review Tools (RECOMMENDED)
+# claude plugin install coderabbit # https://docs.coderabbit.ai/cli/claude-code-integration
+claude plugin marketplace add openai/codex-plugin-cc && claude plugin install codex@openai-codex
 
-# UX/UI Design
-claude plugin marketplace add pbakaus/impeccable
-npx skills add nutlope/hallmark --skill hallmark --agent claude-code --yes --global
+# UX/UI Design Tools (RECOMMENDED)
+claude plugin marketplace add pbakaus/impeccable && claude plugin install 
+claude plugin marketplace add Leonxlnx/taste-skill && claude plugin install taste-skill@taste-skill
+npx skills add nutlope/hallmark --skill hallmark --yes --global
 
-# Productivity/Code-review
-npx skills add thananon/9arm-skills --agent claude-code --skill '*' --yes --global
+# Cloudflare (Optional) https://developers.cloudflare.com/agents/model-context-protocol/cloudflare/servers-for-cloudflare/
+claude plugin marketplace add cloudflare/skills && claude plugin install cloudflare@cloudflare
 
-# Vercel
-# npx skills add vercel-labs/agent-skills --agent claude-code --skill '*' --yes --global
+# GitHub (Optional) https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/use-the-github-mcp-server
+claude plugin install github@claude-plugins-official
 
-# Resend
-# npx skills add resend/resend-skills --agent claude-code --skill '*' --yes --global
+# GoLang (Optional)
+# claude plugin marketplace add samber/cc && claude plugin install cc-skills-golang@samber
 
-# Frontend Programming
-npx skills add nuxt/ui --agent claude-code --yes --global
-npx skills add vuejs-ai/skills --agent claude-code --yes --global
+# DotNet (Optional)
+# claude plugin marketplace add dotnet/skills
 
-# Backend Programming
-npx skills add samber/cc-skills-golang --agent claude-code --yes --global
-npx skills add openai/skills --skill aspnet-core --agent claude-code --yes --global
+# Vercel (Optional)
+# npx skills add vercel-labs/agent-skills --skill '*' --yes --global
 
-# AXI
-npx skills add kunchenguid/chrome-devtools-axi --agent claude-code --skill '*' --yes --global
+# Resend (Optional)
+# npx skills add resend/resend-skills --skill '*' --yes --global
+
+# VueJS/NuxtJS (Optional)
+# npx skills add nuxt/ui --yes --global
+# npx skills add vuejs-ai/skills --yes --global
+
+# Chrome AXI (Optional)
+npx skills add kunchenguid/chrome-devtools-axi --skill '*' --yes --global
+
+# Azure (Optional)
+# claude plugin install azure@claude-plugins-official
+
+# Redis (Optional)
+# claude plugin marketplace add redis/agent-skills && claude install redis-development@redis
+
+# LangChain (Optional)
+# claude plugin marketplace add langchain-ai/langchain-skills && claude plugin install langchain-skills@langchain-skills
+
+# Temporal (Optional)
+# claude plugin marketplace add temporalio/claude-temporal-plugin && claude plugin install temporal@temporal-marketplace
 
 
 echo "✅ Installation complete!"
