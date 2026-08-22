@@ -12,6 +12,9 @@ claude plugin marketplace update
 
 echo "🤖 Installing AI MCP and skills..."
 
+# Meaning-based recall across everything your agents learn (RECOMMEDED)
+uv tool install mempalace
+
 # Debugging Tools (RECOMMENDED)
 uv tool install browser-use && browser-use skill install
 claude plugin marketplace add ChromeDevTools/chrome-devtools-mcp && claude plugin install chrome-devtools-mcp@chrome-devtools-plugins
