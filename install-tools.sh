@@ -20,8 +20,8 @@ brew install --cask dotnet-sdk        # .NET SDK
 brew install --cask google-cloud-sdk  # Google Cloud CLI & tools
 brew install --cask freelens          # Free Kubernetes IDE
 brew install --cask orbstack          # Docker / container runtime
-brew install --cask warp              # AI-powered terminal
-brew install act                      # Run GitHub Actions locally
+# brew install --cask warp              # AI-powered terminal
+# brew install act                      # Run GitHub Actions locally (Optional)
 # brew install --cask graalvm-jdk     # GraalVM JDK (optional)
 
 # ─────────────────────────────────────────────
@@ -42,7 +42,6 @@ brew install --cask redis-insight     # Redis GUI client
 # 🛠️ GUI Apps — Utilities & Productivity
 # ─────────────────────────────────────────────
 echo "🛠️ Installing utility and productivity applications..."
-brew install --cask aldente           # Battery charge limiter
 brew install --cask chatgpt           # ChatGPT desktop app
 brew install --cask firefox           # Web browser
 brew install --cask font-jetbrains-mono # Developer font
