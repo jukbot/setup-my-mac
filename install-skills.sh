@@ -48,6 +48,7 @@ claude plugin install github@claude-plugins-official
 
 # GoLang (Optional)
 # claude plugin marketplace add samber/cc && claude plugin install cc-skills-golang@samber
+# claude plugin marketplace add JetBrains/go-modern-guidelines && claude plugin install modern-go-guidelines@goland-claude-marketplace
 
 # DotNet (Optional)
 # claude plugin marketplace add dotnet/skills
