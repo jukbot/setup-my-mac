@@ -40,6 +40,7 @@ claude plugin marketplace add pbakaus/impeccable && claude plugin install
 claude plugin marketplace add Leonxlnx/taste-skill && claude plugin install taste-skill@taste-skill
 npx skills add nutlope/hallmark --skill hallmark --yes --global
 npx skills@latest add emilkowalski/skills --skill '*' --yes --global
+npx skills add https://github.com/dmmulroy/anti-slop --skill install-anti-slop --yes --global
 
 # Cloudflare (Optional) https://developers.cloudflare.com/agents/model-context-protocol/cloudflare/servers-for-cloudflare/
 claude plugin marketplace add cloudflare/skills && claude plugin install cloudflare@cloudflare
