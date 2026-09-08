@@ -36,6 +36,9 @@ claude plugin marketplace add DietrichGebert/ponytail && claude plugin install p
 # claude plugin install coderabbit # https://docs.coderabbit.ai/cli/claude-code-integration
 claude plugin marketplace add openai/codex-plugin-cc && claude plugin install codex@openai-codex
 
+# Security Review Tools (RECOMMENDED)
+claude plugin install claude-security@claude-plugins-official
+ 
 # UX/UI Design Tools (RECOMMENDED)
 claude plugin marketplace add pbakaus/impeccable && claude plugin install 
 claude plugin marketplace add Leonxlnx/taste-skill && claude plugin install taste-skill@taste-skill
