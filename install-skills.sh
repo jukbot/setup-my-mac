@@ -22,6 +22,7 @@ claude plugin marketplace add ChromeDevTools/chrome-devtools-mcp && claude plugi
 # Productivity Tools (RECOMMENDED)
 claude plugin marketplace add hyperb1iss/hyperskills && claude plugin install hyperskills@hyperb1iss
 claude plugin marketplace add mattpocock/skills && claude plugin install mattpocock-skills@mattpococ
+claude plugin marketplace add addyosmani/agent-skills && claude plugin install agent-skills@addy-agent-skills
 npx skills add thananon/9arm-skills --skill '*' --yes --global
 
 # Knowledge Workers (RECOMMENDED)
