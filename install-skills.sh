@@ -38,6 +38,7 @@ claude plugin marketplace add openai/codex-plugin-cc && claude plugin install co
 
 # Security Review Tools (RECOMMENDED)
 claude plugin install claude-security@claude-plugins-official
+npx degit agamm/claude-code-owasp/.claude/skills/owasp-security ~/.claude/skills/owasp-security
  
 # UX/UI Design Tools (RECOMMENDED)
 claude plugin marketplace add pbakaus/impeccable && claude plugin install 
