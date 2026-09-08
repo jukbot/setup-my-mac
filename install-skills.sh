@@ -37,6 +37,7 @@ claude plugin marketplace add DietrichGebert/ponytail && claude plugin install p
 claude plugin marketplace add openai/codex-plugin-cc && claude plugin install codex@openai-codex
 
 # Security Review Tools (RECOMMENDED)
+claude plugin install security-guidance@claude-plugins-official
 claude plugin install claude-security@claude-plugins-official
 npx degit agamm/claude-code-owasp/.claude/skills/owasp-security ~/.claude/skills/owasp-security
  
