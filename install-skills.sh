@@ -65,6 +65,9 @@ claude plugin install github@claude-plugins-official
 npx skills add vercel-labs/agent-skills --skill '*' --yes --global
 npx skills add vercel/turborepo --yes --global
 
+# Shadcn (Optional)
+npx skills add shadcn/ui --skill 'shadcn' --yes --global
+
 # Resend (Optional)
 # npx skills add resend/resend-skills --skill '*' --yes --global
 
