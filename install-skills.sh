@@ -42,11 +42,11 @@ claude plugin install claude-security@claude-plugins-official
 npx degit agamm/claude-code-owasp/.claude/skills/owasp-security ~/.claude/skills/owasp-security
  
 # UX/UI Design Tools (RECOMMENDED)
-claude plugin marketplace add pbakaus/impeccable && claude plugin install 
-claude plugin marketplace add Leonxlnx/taste-skill && claude plugin install taste-skill@taste-skill
+claude plugin marketplace add pbakaus/impeccable && claude plugin install
 npx skills add nutlope/hallmark --skill hallmark --yes --global
-npx skills@latest add emilkowalski/skills --skill '*' --yes --global
-npx skills add https://github.com/dmmulroy/anti-slop --skill install-anti-slop --yes --global
+npx skills add emilkowalski/skills --skill '*' --yes --global
+npx skills add Leonxlnx/taste-skill  --skill '*' --yes --global
+npx skills add dmmulroy/anti-slop --skill '*' --yes --global
 
 # Cloudflare (Optional) https://developers.cloudflare.com/agents/model-context-protocol/cloudflare/servers-for-cloudflare/
 claude plugin marketplace add cloudflare/skills && claude plugin install cloudflare@cloudflare
