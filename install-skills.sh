@@ -20,8 +20,7 @@ uv tool install browser-use && browser-use skill install
 claude plugin marketplace add ChromeDevTools/chrome-devtools-mcp && claude plugin install chrome-devtools-mcp@chrome-devtools-plugins
 
 # Productivity Tools (RECOMMENDED)
-claude plugin marketplace add hyperb1iss/hyperskills && claude plugin install hyperskills@hyperb1iss
-claude plugin marketplace add mattpocock/skills && claude plugin install mattpocock-skills@mattpococ
+claude plugin install mattpocock-skills@claude-plugins-official
 claude plugin marketplace add addyosmani/agent-skills && claude plugin install agent-skills@addy-agent-skills
 npx skills add thananon/9arm-skills --skill '*' --yes --global
 
@@ -71,6 +70,9 @@ npx skills add shadcn/ui --skill 'shadcn' --yes --global
 # Resend (Optional)
 # npx skills add resend/resend-skills --skill '*' --yes --global
 
+# PostgresQL (Optional)
+npx skills add microsoft/postgres-skills --full-depth --yes --global
+
 # VueJS/NuxtJS (Optional)
 # npx skills add nuxt/ui --yes --global
 # npx skills add vuejs-ai/skills --yes --global
@@ -87,8 +89,9 @@ npx skills add kunchenguid/chrome-devtools-axi --skill '*' --yes --global
 # LangChain (Optional)
 # claude plugin marketplace add langchain-ai/langchain-skills && claude plugin install langchain-skills@langchain-skills
 
-# Temporal (Optional)
-# claude plugin marketplace add temporalio/claude-temporal-plugin && claude plugin install temporal@temporal-marketplace
+# Temporal + MCP (Optional)
+claude plugin marketplace add temporalio/claude-temporal-plugin && claude plugin install temporal@temporal-marketplace
+claude mcp add --scope user --transport http temporal-docs https://temporal.mcp.kapa.ai
 
 # P'Dear AI Gateway (Optional)
 # claude plugin marketplace add EverydayImcalculating/claude-skills && claude plugin install aigw
