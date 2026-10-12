@@ -10,6 +10,9 @@ set -e
 echo "🤖 Updating AI marketplace(s)..."
 claude plugin marketplace update
 
+echo "🤖 Updating all skills..."
+npx skills update
+
 echo "🤖 Installing AI MCP and skills..."
 
 # Meaning-based recall across everything your agents learn (RECOMMEDED)
@@ -23,6 +26,7 @@ claude plugin marketplace add ChromeDevTools/chrome-devtools-mcp && claude plugi
 claude plugin install mattpocock-skills@claude-plugins-official
 claude plugin marketplace add addyosmani/agent-skills && claude plugin install agent-skills@addy-agent-skills
 npx skills add thananon/9arm-skills --skill '*' --yes --global
+npx skills add backnotprop/pstack --skill '*' --yes --global
 
 # Knowledge Workers (RECOMMENDED)
 claude plugin marketplace add anthropics/knowledge-work-plugins
@@ -65,12 +69,12 @@ npx skills add vercel-labs/agent-skills --skill '*' --yes --global
 npx skills add vercel/turborepo --yes --global
 
 # Shadcn (Optional)
-npx skills add shadcn/ui --skill 'shadcn' --yes --global
+# npx skills add shadcn/ui --skill 'shadcn' --yes --global
 
 # Resend (Optional)
 # npx skills add resend/resend-skills --skill '*' --yes --global
 
-# PostgresQL (Optional)
+# PostgresQL (Recommended)
 npx skills add microsoft/postgres-skills --full-depth --yes --global
 
 # VueJS/NuxtJS (Optional)
