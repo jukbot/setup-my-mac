@@ -51,7 +51,8 @@ npx degit agamm/claude-code-owasp/.claude/skills/owasp-security ~/.claude/skills
 claude plugin marketplace add pbakaus/impeccable && claude plugin install
 npx skills add nutlope/hallmark --skill hallmark --yes --global
 npx skills add emilkowalski/skills --skill '*' --yes --global
-npx skills add Leonxlnx/taste-skill  --skill '*' --yes --global
+npx skills add Leonxlnx/taste-skill --skill '*' --yes --global
+npx skills add jakubkrehel/skills --skill '*' --yes --global
 npx skills add dmmulroy/anti-slop --skill '*' --yes --global
 
 # Cloudflare (Optional) https://developers.cloudflare.com/agents/model-context-protocol/cloudflare/servers-for-cloudflare/
@@ -66,6 +67,7 @@ claude plugin install github@claude-plugins-official
 
 # DotNet (Optional)
 # claude plugin marketplace add dotnet/skills
+# claude plugin marketplace add codewithmukesh/dotnet-claude-kit && claude plugin install dotnet-claude-kit
 
 # Vercel (Optional)
 npx skills add vercel-labs/agent-skills --skill '*' --yes --global
