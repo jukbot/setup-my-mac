@@ -96,6 +96,7 @@ echo "🐍 Installing Python ecosystem..."
 brew install python  # Python interpreter
 brew install uv      # Fast Python package installer and resolver
 brew install ty      # Python type checker
+brew install ruff    # Python linter and code formatter
 brew install pyenv   # Python version manager
 
 # ─────────────────────────────────────────────
