@@ -38,7 +38,8 @@ claude plugin install mattpocock-skills@claude-plugins-official
 npx skills add thananon/9arm-skills --skill '*' --yes --global
 # วิธีคิดและวิธีทำงานร่วมกับ AI หลายตัว - tdd, typescript-best-practices, unslop, swarm, interrogate และทักษะอื่น ๆ Read more https://github.com/backnotprop/pstack
 npx skills add backnotprop/pstack --skill '*' --yes --global
-
+# สั่ง AI ให้สร้าง Architecture Diagram แบบ Interactive จากคำอธิบายหรือ Source Code ได้เลย ไม่ต้องนั่งลากกล่องใน draw.io ให้ปวดหัว
+npx skills add tt-a1i/archify --skill '*' --yes --global
 
 # LLM Agent Central Memory (✅ VERY RECOMMENDED เนื่องจาก LLMs มีหน่วยความจำชั่วคราวต่อเซสซั่น แต่ถ้าอยากได้ระยะยาวต้องหาที่เก็บกลาง)
 # =========================================================================================================
