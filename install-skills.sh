@@ -41,6 +41,7 @@ npx skills add backnotprop/pstack --skill '*' --yes --global
 # สั่ง AI ให้สร้าง Architecture Diagram แบบ Interactive จากคำอธิบายหรือ Source Code ได้เลย ไม่ต้องนั่งลากกล่องใน draw.io ให้ปวดหัว
 npx skills add tt-a1i/archify --skill '*' --yes --global
 
+
 # LLM Agent Central Memory (✅ VERY RECOMMENDED เนื่องจาก LLMs มีหน่วยความจำชั่วคราวต่อเซสซั่น แต่ถ้าอยากได้ระยะยาวต้องหาที่เก็บกลาง)
 # =========================================================================================================
 # ความจำระยะยาวของ AI เก็บและค้นข้อมูลจากโปรเจกต์ เอกสาร และบทสนทนาเก่า เช่น ต้องการให้ Claude จำเหตุผลการเลือก Architecture
