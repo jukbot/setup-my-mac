@@ -162,7 +162,4 @@ claude mcp add --scope user --transport http temporal-docs https://temporal.mcp.
 # LangChain (Optional)
 # claude plugin marketplace add langchain-ai/langchain-skills && claude plugin install langchain-skills@langchain-skills
 
-# P'Dear AI Gateway (Optional)
-# claude plugin marketplace add EverydayImcalculating/claude-skills && claude plugin install aigw
-
 echo "✅ Installation complete!"
