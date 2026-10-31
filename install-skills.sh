@@ -65,6 +65,7 @@ claude plugin marketplace add DietrichGebert/ponytail && claude plugin install p
 # =========================================================================================================
 # เตือนโค้ดเสี่ยงอัตโนมัติ + ตรวจ diff ด้วย AI
 claude plugin install security-guidance@claude-plugins-official
+claude  plugin install code-modernization@claude-plugins-official
 # สแกนหาช่องโหว่ใน codebase อย่างเป็นระบบ
 claude plugin install claude-security@claude-plugins-official
 # ให้ Claude ใช้แนวทาง OWASP ในการเขียนและรีวิวโค้ด
