@@ -28,19 +28,21 @@ echo "🤖 Installing MCP and skills..."
 uv tool install browser-use && browser-use skill install
 # ตรวจ Console errors, Network requests, JavaScript runtime, Performance traces และทดสอบเว็บผ่าน Chrome ลูกรัก
 claude plugin marketplace add ChromeDevTools/chrome-devtools-mcp && claude plugin install chrome-devtools-mcp@chrome-devtools-plugins
-
+claude plugin marketplace add GoogleChrome/modern-web-guidance && claude plugin install modern-web-guidance@googlechrome
 
 # Productivity Tools (✅ VERY RECOMMENDED เพราะช่วยให้ผลลัพธ์ออกมาดีขึ้น ทำงานได้เร็วขึ้น)
 # =========================================================================================================
 # เน้น Engineering workflow - เก็บ Requirements, TDD, Code Review, Debugging และ Domain Modeling เช่น grill-me, wayfinder, to-ticket, to-spec
 claude plugin install mattpocock-skills@claude-plugins-official
+
+# ปลั๊กอินและระบบรวมสกิล (Agent Skills) สำหรับ AI Coding Agent ใน Cursor (สร้างโดย Lauren Tan หรือ @poteto) ที่ช่วยเปลี่ยนให้ AI เขียนโค้ดอย่างเป็นระบบเหมือนวิศวกรซอฟต์แวร์จริงๆ
+claude plugin marketplace add cursor/plugins && claude plugin install pstack@cursor-plugins
+
 # ทักษะจาก workflow ของผู้พัฒนา - มี Engineering, Debugging, Post-mortem และ Productivity skills เช่น scrutinize, debug-mantra
 npx skills add thananon/9arm-skills --skill '*' --yes --global
-# วิธีคิดและวิธีทำงานร่วมกับ AI หลายตัว - tdd, typescript-best-practices, unslop, swarm, interrogate และทักษะอื่น ๆ Read more https://github.com/backnotprop/pstack
-npx skills add backnotprop/pstack --skill '*' --yes --global
+
 # สั่ง AI ให้สร้าง Architecture Diagram แบบ Interactive จากคำอธิบายหรือ Source Code ได้เลย ไม่ต้องนั่งลากกล่องใน draw.io ให้ปวดหัว
 npx skills add tt-a1i/archify --skill '*' --yes --global
-
 
 # LLM Agent Central Memory (✅ VERY RECOMMENDED เนื่องจาก LLMs มีหน่วยความจำชั่วคราวต่อเซสซั่น แต่ถ้าอยากได้ระยะยาวต้องหาที่เก็บกลาง)
 # =========================================================================================================
