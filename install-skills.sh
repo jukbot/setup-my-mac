@@ -76,6 +76,8 @@ claude plugin marketplace add agamm/claude-code-owasp && claude plugin install o
 
 # UX/UI Design Tools (✅ RECOMMENDED ช่วยให้งานออกแบบหน้าบ้าน ใช้งานง่ายขึ้น จาก คุณสมบัติของผู้ใช้งาน การทดสอบ UI ต่างๆ และออกแบบไม่ให้ดู Slop และ Follow UX best practics)
 # =========================================================================================================
+# ไว้แก้ไข css ดีไซน์ต่างๆ ในเว็บ
+claude plugin install frontend-design@claude-plugins-official
 # คำสั่ง audit, critique, polish และตรวจจับปัญหาด้านดีไซน์
 claude plugin marketplace add pbakaus/impeccable && claude plugin install
 # Design tokens, components, accessibility และ workflow ตรวจงาน
