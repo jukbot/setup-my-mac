@@ -74,7 +74,7 @@ claude plugin install claude-security@claude-plugins-official
 claude plugin marketplace add agamm/claude-code-owasp && claude plugin install owasp-security@agamm
 
 
-# UX/UI Design Tools (✅ RECOMMENDED ช่วยให้งานออกแบบหน้าบ้าน ใช้งานง่ายขึ้น จาก คุณสมบัติของผู้ใช้งาน การทดสอบ UI ต่างๆ และออกแบบไม่ให้ดู Slop และ Follow UX best practics)
+# Frontend Design Tools (✅ RECOMMENDED ช่วยให้งานออกแบบหน้าบ้าน ใช้งานง่ายขึ้น จาก คุณสมบัติของผู้ใช้งาน การทดสอบ UI ต่างๆ และออกแบบไม่ให้ดู Slop และ Follow UX best practics)
 # =========================================================================================================
 # ไว้แก้ไข css ดีไซน์ต่างๆ ในเว็บ
 claude plugin install frontend-design@claude-plugins-official
@@ -92,6 +92,8 @@ npx skills add Leonxlnx/taste-skill --skill '*' --yes --global
 npx skills add jakubkrehel/skills --skill '*' --yes --global
 # กรอง Slop UI, Copy, Responsive, Accessibility
 npx skills add miqdadbadjuber/anti-slop --skill '*' --yes --global
+# Scan your codebase and find opportunities to modernize
+npx modern-web-guidance@latest install --yes --global
 
 
 # Code Review Tools (⚠️ OPTIONAL เมื่อเราใช้ CODERABBIT หรือ สมัคร OPENAI CODEX เอาไว้ทำ code-review กัน bias)
