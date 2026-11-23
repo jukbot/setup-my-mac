@@ -33,19 +33,19 @@ claude plugin marketplace add GoogleChrome/modern-web-guidance && claude plugin 
 # Productivity Tools (✅ VERY RECOMMENDED เพราะช่วยให้ผลลัพธ์ออกมาดีขึ้น ทำงานได้เร็วขึ้น)
 # =========================================================================================================
 # เน้น Engineering workflow - เก็บ Requirements, TDD, Code Review, Debugging และ Domain Modeling เช่น grill-me, wayfinder, to-ticket, to-spec
-claude plugin install mattpocock-skills@claude-plugins-official
+npx -y skills add mattpocock/skills --skill '*' -g -y
 
 # ปลั๊กอินและระบบรวมสกิล (Agent Skills) สำหรับ AI Coding Agent ใน Cursor (สร้างโดย Lauren Tan หรือ @poteto) ที่ช่วยเปลี่ยนให้ AI เขียนโค้ดอย่างเป็นระบบเหมือนวิศวกรซอฟต์แวร์จริงๆ
 claude plugin marketplace add cursor/plugins && claude plugin install pstack@cursor-plugins
 
 # เชื่อมต่อและรับงานจาก AI Agent ต่างๆ เช่น ChatGPT, Claude, Cursor หรือ Codex เพื่อนำเว็บหรือแอปที่สร้างขึ้นไปเผยแพร่และโฮสต์ได้รวดเร็ว
-claude mcp add --scope user --transport stdio spacefast -- npx -y spacefast mcp
+npx -y skills add spacefast/plugins --skill spacefast -g -y
 
 # ทักษะจาก workflow ของผู้พัฒนา - มี Engineering, Debugging, Post-mortem และ Productivity skills เช่น scrutinize, debug-mantra
-npx skills add thananon/9arm-skills --skill '*' --yes --global
+npx -y skills add thananon/9arm-skills --skill '*' -g -y
 
 # สั่ง AI ให้สร้าง Architecture Diagram แบบ Interactive จากคำอธิบายหรือ Source Code ได้เลย ไม่ต้องนั่งลากกล่องใน draw.io ให้ปวดหัว
-npx skills add tt-a1i/archify --skill '*' --yes --global
+npx -y skills add tt-a1i/archify --skill '*' -g -y
 
 
 # LLM Agent Central Memory (✅ VERY RECOMMENDED เนื่องจาก LLMs มีหน่วยความจำชั่วคราวต่อเซสซั่น แต่ถ้าอยากได้ระยะยาวต้องหาที่เก็บกลาง)
@@ -87,17 +87,17 @@ claude plugin marketplace add pbakaus/impeccable && claude plugin install
 # Design tokens, components, accessibility และ workflow ตรวจงาน
 claude plugin marketplace add plugin87/ux-ui-agent-skills && claude plugin install ux-ui-agent-skills@ux-ui-agent-skills
 # บังคับให้หน้าเว็บมีเอกลักษณ์ ลดแพตเทิร์น AI สำเร็จรูป
-npx skills add nutlope/hallmark --skill hallmark --yes --global
+npx skills add nutlope/hallmark --skill hallmark -g -y
 # ความละเอียดของ UI, Animation และ Interaction
-npx skills add emilkowalski/skills --skill '*' --yes --global
+npx skills add emilkowalski/skills --skill '*' -g -y
 # Art direction และแนวทางสร้างเว็บไซต์ที่มีรสนิยม
-npx skills add Leonxlnx/taste-skill --skill '*' --yes --global
+npx skills add Leonxlnx/taste-skill --skill '*' -g -y
 # Typography, สี, Layout, Accessibility และ Interface review
-npx skills add jakubkrehel/skills --skill '*' --yes --global
+npx skills add jakubkrehel/skills --skill '*' -g -y
 # กรอง Slop UI, Copy, Responsive, Accessibility
-npx skills add miqdadbadjuber/anti-slop --skill '*' --yes --global
+npx skills add miqdadbadjuber/anti-slop --skill '*' -g -y
 # Scan your codebase and find opportunities to modernize
-npx modern-web-guidance@latest install --yes --global
+npx modern-web-guidance@latest install -g -y
 
 
 # Code Review Tools (⚠️ OPTIONAL เมื่อเราใช้ CODERABBIT หรือ สมัคร OPENAI CODEX เอาไว้ทำ code-review กัน bias)
@@ -126,8 +126,8 @@ npx modern-web-guidance@latest install --yes --global
 # =========================================================================================================
 
 # Vercel (Optional)
-npx skills add vercel-labs/agent-skills --skill '*' --yes --global
-npx skills add vercel/turborepo --skill '*' --yes --global
+npx skills add vercel-labs/agent-skills --skill '*' -g -y
+npx skills add vercel/turborepo --skill '*' -g -y
 
 # Cloudflare (Optional) https://developers.cloudflare.com/agents/model-context-protocol/cloudflare/servers-for-cloudflare/
 claude plugin marketplace add cloudflare/skills && claude plugin install cloudflare@cloudflare
@@ -140,21 +140,21 @@ claude plugin marketplace add cloudflare/skills && claude plugin install cloudfl
 # =========================================================================================================
 
 # Shadcn (Optional)
-# npx skills add shadcn/ui --skill 'shadcn' --yes --global
+# npx skills add shadcn/ui --skill 'shadcn' -g -y
 
 # Resend (Optional)
-# npx skills add resend/resend-skills --skill '*' --yes --global
+# npx skills add resend/resend-skills --skill '*' -g -y
 
 # VueJS/NuxtJS (Optional)
-# npx skills add nuxt/ui --skill '*' --yes --global
-# npx skills add vuejs-ai/skills --skill '*' --yes --global
+# npx skills add nuxt/ui --skill '*' -g -y
+# npx skills add vuejs-ai/skills --skill '*' -g -y
 
 
 # Databases (⚠️ OPTIONAL เป็นทักษะ สำหรับการใช้งานฐานข้อมูล ติดตั้งเฉพาะเมื่อใช้งานเท่านั้น)
 # =========================================================================================================
 
 # PostgresQL (Recommended)
-npx skills add microsoft/postgres-skills --full-depth --yes --global
+npx skills add microsoft/postgres-skills --full-depth -g -y
 
 # Redis (Optional)
 # claude plugin marketplace add redis/agent-skills && claude install redis-development@redis
