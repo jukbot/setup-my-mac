@@ -38,11 +38,15 @@ claude plugin install mattpocock-skills@claude-plugins-official
 # ปลั๊กอินและระบบรวมสกิล (Agent Skills) สำหรับ AI Coding Agent ใน Cursor (สร้างโดย Lauren Tan หรือ @poteto) ที่ช่วยเปลี่ยนให้ AI เขียนโค้ดอย่างเป็นระบบเหมือนวิศวกรซอฟต์แวร์จริงๆ
 claude plugin marketplace add cursor/plugins && claude plugin install pstack@cursor-plugins
 
+# เชื่อมต่อและรับงานจาก AI Agent ต่างๆ เช่น ChatGPT, Claude, Cursor หรือ Codex เพื่อนำเว็บหรือแอปที่สร้างขึ้นไปเผยแพร่และโฮสต์ได้รวดเร็ว
+claude mcp add --scope user --transport stdio spacefast -- npx -y spacefast mcp
+
 # ทักษะจาก workflow ของผู้พัฒนา - มี Engineering, Debugging, Post-mortem และ Productivity skills เช่น scrutinize, debug-mantra
 npx skills add thananon/9arm-skills --skill '*' --yes --global
 
 # สั่ง AI ให้สร้าง Architecture Diagram แบบ Interactive จากคำอธิบายหรือ Source Code ได้เลย ไม่ต้องนั่งลากกล่องใน draw.io ให้ปวดหัว
 npx skills add tt-a1i/archify --skill '*' --yes --global
+
 
 # LLM Agent Central Memory (✅ VERY RECOMMENDED เนื่องจาก LLMs มีหน่วยความจำชั่วคราวต่อเซสซั่น แต่ถ้าอยากได้ระยะยาวต้องหาที่เก็บกลาง)
 # =========================================================================================================
