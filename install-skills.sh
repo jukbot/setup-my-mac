@@ -38,6 +38,9 @@ npx -y skills add mattpocock/skills --skill '*' -g -y
 # ปลั๊กอินและระบบรวมสกิล (Agent Skills) สำหรับ AI Coding Agent ใน Cursor (สร้างโดย Lauren Tan หรือ @poteto) ที่ช่วยเปลี่ยนให้ AI เขียนโค้ดอย่างเป็นระบบเหมือนวิศวกรซอฟต์แวร์จริงๆ
 claude plugin marketplace add cursor/plugins && claude plugin install pstack@cursor-plugins
 
+# สอนให้ AI “ใช้ Obsidian เป็นจริง”  มากกว่าเขียน Markdown มั่วๆ แต่เข้าใจระบบทั้งหมดแบบ native ตั้งแต่ syntax ไปจนถึงโครงสร้าง vault
+claude plugin marketplace add obsidianmd/obsidian-skills && claude plugin install obsidian@obsidian-skills
+
 # เชื่อมต่อและรับงานจาก AI Agent ต่างๆ เช่น ChatGPT, Claude, Cursor หรือ Codex เพื่อนำเว็บหรือแอปที่สร้างขึ้นไปเผยแพร่และโฮสต์ได้รวดเร็ว
 npx -y skills add spacefast/plugins --skill spacefast -g -y
 
@@ -164,13 +167,16 @@ npx skills add microsoft/postgres-skills --full-depth -g -y
 # =========================================================================================================
 
 # GitHub (Optional) https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/use-the-github-mcp-server
-claude plugin install github@claude-plugins-official
+# claude plugin install github@claude-plugins-official
 
 # Temporal + MCP (Optional)
-claude plugin marketplace add temporalio/claude-temporal-plugin && claude plugin install temporal@temporal-marketplace
-claude mcp add --scope user --transport http temporal-docs https://temporal.mcp.kapa.ai
+# claude plugin marketplace add temporalio/claude-temporal-plugin && claude plugin install temporal@temporal-marketplace
+# claude mcp add --scope user --transport http temporal-docs https://temporal.mcp.kapa.ai
 
 # LangChain (Optional)
 # claude plugin marketplace add langchain-ai/langchain-skills && claude plugin install langchain-skills@langchain-skills
+
+# SpaceFast (Optional)
+# claude mcp add --scope user --transport stdio spacefast -- npx -y spacefast mcp
 
 echo "✅ Installation complete!"
